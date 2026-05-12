@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: hsl(30 15% 12%);
+  --color-surface: hsl(30 12% 16%);
+  --color-text: hsl(42 20% 90%);
+  --color-accent: hsl(40 55% 66%);
+  --color-accent-foreground: hsl(30 15% 12%);
+  --color-muted: hsl(30 10% 40%);
+  --color-border: hsl(30 10% 22%);
+  --color-focus-ring: hsl(40 55% 66%);
+  --radius-md: 4px;
+  --space-element: 16px;
+  --duration-fast: 150ms;
+  --duration-normal: 400ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: hsl(30 15% 12%);
+  color: hsl(42 20% 90%);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: hsl(40 55% 66% / 0.3);
+  color: hsl(42 20% 90%);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid hsl(40 55% 66%);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(30 15% 12%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(30 10% 22%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(30 10% 30%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
